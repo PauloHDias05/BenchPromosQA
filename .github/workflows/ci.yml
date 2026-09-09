@@ -13,6 +13,9 @@ jobs:
           headless: true
           config-file: cypress.config.js
         env:
+          LANG: pt_BR.UTF-8
+          LANGUAGE: pt_BR:pt
+          LC_ALL: pt_BR.UTF-8
           CYPRESS_urlbase: ${{ secrets.URLBASE }}
           CYPRESS_email_invalido: ${{ secrets.EMAIL_INVALIDO }}
           CYPRESS_email_padrao: ${{ secrets.EMAIL_PADRAO }}
