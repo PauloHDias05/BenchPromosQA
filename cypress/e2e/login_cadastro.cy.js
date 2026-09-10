@@ -22,6 +22,11 @@ describe('Login e Cadastro', () => {
   })
 
   context('Cenários de Login', () => {
+    it('Login com sucesso', () => {
+      cy.get('[name="email"]').type(env.login.username)
+      cy.get('[name="password"]').type(env.login.password2 + '{enter}')
+      cy.url().should('eq', env.urlbase)
+    })
     it('Tentar logar com senha com menos de 8 caracteres', () => {
       cy.get('[name="email"]').type(env.login.username)
       cy.get('[name="password"]').type('123456')

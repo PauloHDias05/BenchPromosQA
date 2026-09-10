@@ -23,7 +23,7 @@ jobs:
           CYPRESS_senha_menor8: ${{ secrets.SENHA_MENOR8 }}
           CYPRESS_senha_errada: ${{ secrets.SENHA_ERRADA }}
           CYPRESS_nome: ${{ secrets.NOME}}
-          CYPRESS_login: '{"username":"${{ secrets.USERNAME }}","password":"${{ secrets.PASSWORD }}"}'    
+          CYPRESS_login: '{"username":"${{ secrets.USERNAME }}","password":"${{ secrets.PASSWORD }}","password2":"${{ secrets.PASSWORD2 }}"}'    
 
       - uses: actions/upload-artifact@v7
        
