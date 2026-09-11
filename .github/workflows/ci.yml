@@ -46,7 +46,7 @@ jobs:
         uses: actions/upload-artifact@v7
         with:
           name: cypress-reports
-          path: cypress/reports
+          path: cypress/reports/html
           if-no-files-found: ignore
 
       
@@ -68,7 +68,7 @@ jobs:
         if: always()
         uses: actions/upload-pages-artifact@v4
         with:
-          path: cypress/reports
+          path: cypress/reports/html
 
   deploy-report:
     needs: cypress-run
